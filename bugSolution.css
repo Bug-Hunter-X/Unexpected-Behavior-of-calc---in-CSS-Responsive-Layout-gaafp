@@ -1,0 +1,24 @@
+A more robust solution avoids using `calc()` altogether and leverages more widely compatible CSS techniques to achieve a similar responsive layout.  For instance, we can use flexbox or grid, which provide better control over layout and are less prone to browser inconsistencies:
+
+```css
+/* Solution using flexbox */
+div {
+  width: 50%;
+  margin-right: 20px;
+  box-sizing: border-box; /* Add this to include padding and border in the width calculation */
+}
+
+/* Using grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+```
+
+This solution ensures consistency across different browsers and offers a more reliable and maintainable way to implement responsive layouts.
