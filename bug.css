@@ -1,0 +1,9 @@
+The following CSS code snippet exhibits an unusual behavior.  The intention is to create a responsive layout where the `div`'s width adjusts based on the viewport width. However, the `calc()` function within the `width` property doesn't work as expected in some browsers, particularly older ones or those with limited CSS support.:
+
+```css
+div {
+  width: calc(50% - 20px);
+}
+```
+
+The expected behavior is that the `div`'s width will be 50% of its containing element's width, minus 20 pixels. However, the actual behavior might vary depending on the browser and context.  In some cases, the `calc()` function is ignored, or it fails to parse correctly, leading to unexpected layout issues.
